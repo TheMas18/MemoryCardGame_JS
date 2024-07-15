@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Image Flicker</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/app.js"></script>
+</head>
+
+<body>	
+		<nav>
+			<h2>Image Flicker</h2>
+
+		</nav>
+	<div class="main-container">
+	
+		<main>
+			<div class="main-panel float-left">
+				<div class="game-navigation">
+					<div class="username-info float-left">TheMasOP</div>
+					<div class="mistake-info float-left">
+						Mistake<span id="mistake">0</span>/<span id="totalMistakes">0</span>
+					</div>
+					<div class="time-info float-left">
+						Time<span id="timer" class="margin-left-10">0</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="game-panel">
+					<div id="game-board"></div>
+				</div>
+			</div>
+			<div class="side-panel float-left">
+				<div class="instruction-panel">
+						<div class="instruction-header-text">Rules :</div>
+						<div class="instructons-description">
+							<ul>
+								<li>Click on any card to reveal its hidden image.</li>
+								<li>Remember both the location and image of each card you uncover.</li>
+				
+								<li>Click on a second card to reveal its image as well.</li>
+				
+								<li>If the two cards match, they will remain face-up, and you'll earn points! Matching pairs earn you +5
+									points.</li>
+				
+								<li>Keep flipping cards and matching pairs until you've uncovered all the matches on the grid.</li>
+				
+								<li>But beware - every wrong guess will cost you precious time and points! Incorrect guesses result in a
+									deduction of -5 points.</li>
+				
+								<li>Additionally, there's a mistake limit. Each wrong move deducts 1 from the allotted number of
+									mistakes.</li>
+							</ul>
+
+						</div>
+					
+				</div>
+				<div class="showcase-panel">
+					<div class="level-info float-left">
+						Moves<span id="move" class="margin-left-10">0</span>
+						
+					</div>
+					<div class="score-info float-left">
+						Score<span id="gameScore">0</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="button-groups">
+					<button class="float-left button-layout" id="resetGame">
+						Setting
+					</button>
+					<button class="float-left button-layout" id="playAgain" name="mainScreen_playAgain">
+						Play Again
+					</button>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div id="game-start-countdown">
+					<div class="left-side-blur float-left">
+							<div class="nav-side-blur"></div>
+							<div class="board-side-blur"></div>
+					</div>
+					<div class="right-side-blur float-left">
+						<h3>Game Starting in...</h3>
+						<div id="countDownStart"></div>
+					</div>
+					<div style="clear: both"></div>
+					
+			 </div>
+		</main>
+		
+		<div id="popup-screen">
+			<div class="game-popup-panel">
+				<div class="game-header-text">Image Flicker</div>
+				<div class="main-popup-container">
+					<div class="game-configuration float-left">
+						<div class="input-groups">
+							<label class="aqua-light-color">Enter Username</label>
+							<input class="input-design margin-top-8" id="username" type="text"
+								placeholder="Enter Username"  autocomplete="off"/>
+							<div class="error-message margin-top-8"></div>
+						</div>
+						<div class="input-groups">
+							<select class="input-design" name="levels" id="gameLevels">
+								<option>Select Game Level</option>
+								<option value="2">Easy</option>
+								<option value="4">Medium</option>
+								<option value="6">Hard</option>
+							</select>
+							<div class="error-message margin-top-8"></div>
+						</div>
+
+						<div class="game-settings aqua-light-color margin-top-15">
+							<div class="mistake-panel margin-top-8">
+								Mistake Limit :<span class="margin-left-10" id="mistakeLimit">0</span>
+							</div>
+							<div class="time-panel margin-top-8">
+								Time Limit :<span class="margin-left-10" id="timeLimit">0</span>
+								s.
+							</div>
+						</div>
+						<div class="input-groups">
+							<button class="input-design button-design aqua-light-color margin-top-10" id="playGameButton">
+								Play Game
+							</button>
+							<button class="input-design button-design  aqua-light-color margin-top-10" id="BackToHomeButton">
+								Back
+							</button>
+						</div>
+						<div id="level-head" class="margin-top-15 aqua-light-color"></div>
+					</div>
+					<div class="game-display-panel float-left">
+						<div class="gameDisplay-Component margin-top-15">
+							<div id="gameDisplay-game-board">
+								<div class="background-thumbnail"></div>
+							</div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+
+			<div class="gameEndPopup-information">
+				<div class="gameEnd-header-text"></div>
+				<div class="gameEnd-information">
+					<div class="gameEnd-reason margin-top-15 aqua-light-color "></div>
+					<div class="gameEnd-result margin-top-15">Your Score<span id="gameEndScore" class="margin-left-10">0</span></div>
+				</div>
+				<div class="gameEnd-button-groups">
+					<button class="button-layout" id="playAgain" name="gameEndScreen_playAgain">
+						Play Again
+					</button>
+					<button class="button-layout" id="BackToGameConfig">Back</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

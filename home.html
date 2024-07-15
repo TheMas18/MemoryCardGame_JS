@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Image Flicker</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<nav>
+		<h2>Image Flicker</h2>
+	</nav>
+	<div class="maincomponent-container">
+
+		<div class="game-info">
+			<div class="game-image-background float-left">
+				<div class="game-image"></div>
+			</div>
+			<div class="game-description float-left">
+				<h3 class="aqua-light-color">Description</h3>
+				<p class="aqua-light-color">Introducing our captivating Memory Card Game, a thrilling JavaScript-based
+					challenge that will put your memory to the ultimate test! Flip cards to uncover matching pairs
+					within the grid. With each successful match, earn points and progress through increasingly
+					challenging levels. But beware, wrong guesses come with a penalty! Choose from multiple difficulty
+					levels and themed card sets to keep the excitement alive. Track your progress with our scoring
+					system and aim for the high score! Whether you prefer a timed challenge or a relaxed experience,
+					there's something for everyone. Immerse yourself in our beautifully designed interface with smooth
+					animations for an enjoyable gaming experience. Are you ready to embark on this memory-matching
+					adventure? Play now and become the ultimate memory master!</p>
+				<button id="goToMainPage">Play</button>
+			</div>
+			<div style="clear:both"></div>
+
+		</div>
+		<div class="game-instructions-panel aqua-light-color">
+			<h3 class="rules-header aqua-light-color">How to play ?</h3>
+			<p>
+				Welcome to our captivating Memory Card Game, where you'll embark on a thrilling journey to test and hone
+				your memory skills! Here's how to play:
+			</p>
+			<ul>
+				<li>Click on any card to reveal its hidden image.</li>
+				<li>Remember both the location and image of each card you uncover.</li>
+
+				<li>Click on a second card to reveal its image as well.</li>
+
+				<li>If the two cards match, they will remain face-up, and you'll earn points! Matching pairs earn you +5
+					points.</li>
+
+				<li>Keep flipping cards and matching pairs until you've uncovered all the matches on the grid.</li>
+
+				<li>But beware - every wrong guess will cost you precious time and points! Incorrect guesses result in a
+					deduction of -5 points.</li>
+
+				<li>Additionally, there's a mistake limit. Each wrong move deducts 1 from the allotted number of
+					mistakes.</li>
+			</ul>
+			<p>Now, let's dive into the exciting modes this game offers:</p>
+			<ul>
+				<li>Easy Mode: Enjoy a 15-second time limit with 3 allotted mistakes. Perfect for beginners or those
+					seeking a quick challenge.</li>
+				<li>Medium Mode: Test your skills with a 30-second time limit and 4 allotted mistakes. Strike the right
+					balance between speed and accuracy.</li>
+				<li>Hard Mode: Take on the ultimate challenge with a 60-second time limit and 3 allotted mistakes. Only
+					the most skilled players will conquer this mode.</li>
+			</ul>
+			<p> Choose your preferred difficulty level and immerse yourself in the exhilarating world of Memory Card
+				Are you ready to push the boundaries of your memory? Play now and see if you can achieve mastery!
+			</p>
+		</div>
+	</div>
+	<script>
+		let nextPage=document.getElementById("goToMainPage");
+		nextPage.addEventListener("click",function(){
+				window.location.href = "index.html";
+		});
+	</script>
+</body>
+	
+</html>
